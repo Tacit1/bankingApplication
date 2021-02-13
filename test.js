@@ -1,3 +1,5 @@
+// the original test script
+
 const mongoose = require("mongoose");
 const Client = require("./2_database/models/client");
 const Account = require("./2_database/models/account");
@@ -347,7 +349,7 @@ describe("Account tests", () => {
     describe("/DELETE delete last added account", () => {
         it("Should delete last added account", (done) => {
             chai
-                .request(baseUrl)
+                .request(app)
                 .get("/accounts")
                 .end((err, res) => {
                     res.body.length.should.be.above(0);

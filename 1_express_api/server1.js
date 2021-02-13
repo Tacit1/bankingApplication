@@ -38,4 +38,4 @@ const server = https.createServer(options, app)
 server.listen(ports.register('server'), function () {
     console.log('server1 listening on %d', this.address().port);
 });
-
+module.exports=app
